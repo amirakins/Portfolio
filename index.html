@@ -6,6 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="contact.js"></script>
+		<script 
+		type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+   			(function(){
+      		emailjs.init("5r3YP8Naf4hUKqppq");
+   			})();
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -119,7 +129,7 @@
 								</section>
 								<section>
 									<span class="icon solid major fa-code"></span>
-									<h3>HTML</h3>
+									<h3>Git</h3>
 								</section>
 							</div>
 						</div>
@@ -131,25 +141,21 @@
 							<h2>Contact</h2>
 							<div class="split style1">
 								<section>
-									<form method="post" action="action_page.php">
-										<div class="fields">
+									<div class="fields">	
 											<div class="field half">
-												<label for="fullName">Name</label>
-												<input type="text" name="name" id="name" />
+												<label for="name">Name<label>
+												<input type="text" id="name"/>
 											</div>
 											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
+												<label for="email">Email<label>
+												<input type="email" id="email"/>
 											</div>
 											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
+												<label for="message">Message<label>
+												<textarea class="field" id="message" rows="5"></textarea>
 											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
+										</div>	
+									<button class="btn btn-primary" onclick="sendMail()">Submit</button>
 								</section>
 								<section>
 									<ul class="contact">
